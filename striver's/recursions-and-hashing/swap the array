@@ -1,0 +1,29 @@
+# arr=[1,2,3,4,5]
+# n=len(arr)
+
+# for i in range(n // 2):
+#     arr[i], arr[n - 1 - i] = arr[n - 1 - i], arr[i]
+
+# print("Array after swapping:", arr)
+##using two pointer approach
+def swap(l, r):
+    if l >= r:
+        return
+    arr[l], arr[r] = arr[r], arr[l]
+    swap(l + 1, r - 1)
+
+arr = [1, 2, 3, 4, 5]
+print(arr)
+swap(0, len(arr) - 1)
+print(arr)
+
+#using single pointer approach
+def swap(i):
+    n=len(arr)
+    if i>n//2:
+        return
+    arr[i], arr[n - 1 - i] = arr[n - 1 - i], arr[i]
+    swap(i+1)
+arr=[1, 2, 3, 4, 5]
+swap(0)
+print(arr)
