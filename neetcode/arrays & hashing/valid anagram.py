@@ -1,12 +1,12 @@
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
+    def isAnagram(self,s,t):
+        if len(s)!=len(t):
             return False
-            
-        return sorted(s) == sorted(t)
-
-obj=Solution()
-print(obj.isAnagram("listen", "silent"))  # Output: True
+        for id in set(s):
+            if s.count(id)!=t.count(id):
+                return False
+        return True
+    
 
 #optimal solution
 class Solution:
