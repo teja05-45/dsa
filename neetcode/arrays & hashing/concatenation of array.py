@@ -6,6 +6,11 @@ class Solution:
 obj = Solution()
 print(obj.getConcatenation([1, 2, 3]))  # Output: [1, 2, 3, 1, 2, 3]
 
+class Solution:
+    def getConcatenation(self,nums):
+        return nums*2
+print(obj.getConcatenation([1,2,3]))
+
 #brute force
 class Solution:
     def getConcatenation(self, nums):
